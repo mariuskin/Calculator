@@ -34,7 +34,6 @@ class ViewController: UIViewController {
             label.text = "Int conversion failed"
             return
         }
-        
         label.text = "\(labelInt)"
     }
     
@@ -68,6 +67,11 @@ class ViewController: UIViewController {
     }
     
     @IBAction func tappedClear(sender: AnyObject) {
+        savedNum = 0
+        labelString = "0"
+        label.text = "0"
+        currentMode = modes.NOT_SET
+        lastButtonWasMode = false
     }
     
     
