@@ -30,7 +30,12 @@ class ViewController: UIViewController {
     }
     
     func updateText() {
-        label.text = labelString
+        guard let labelInt:Int = Int(labelString) else {
+            label.text = "Int conversion failed"
+            return
+        }
+        
+        label.text = "\(labelInt)"
     }
     
     func changeMode(newMode:modes) {
